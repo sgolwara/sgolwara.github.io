@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+{% if site.essays.size > 0 %}
+<h2 class="section-heading">Essays</h2>
+<ul class="piece-list">
+  {% assign sorted_essays = site.essays | sort: 'date' | reverse %}
+  {% for piece in sorted_essays %}
+  <li>
+    <a href="{{ piece.url | relative_url }}">{{ piece.title }}</a>
+    <span class="piece-date">{{ piece.date | date: "%b %-d, %Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if site.stories.size > 0 %}
+<h2 class="section-heading">Stories</h2>
+<ul class="piece-list">
+  {% assign sorted_stories = site.stories | sort: 'date' | reverse %}
+  {% for piece in sorted_stories %}
+  <li>
+    <a href="{{ piece.url | relative_url }}">{{ piece.title }}</a>
+    <span class="piece-date">{{ piece.date | date: "%b %-d, %Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if site.poems.size > 0 %}
+<h2 class="section-heading">Poems</h2>
+<ul class="piece-list">
+  {% assign sorted_poems = site.poems | sort: 'date' | reverse %}
+  {% for piece in sorted_poems %}
+  <li>
+    <a href="{{ piece.url | relative_url }}">{{ piece.title }}</a>
+    <span class="piece-date">{{ piece.date | date: "%b %-d, %Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

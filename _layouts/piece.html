@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<a class="back-link" href="{{ '/' | relative_url | append: page.collection | append: '/' }}">Back</a>
+
+<article>
+  <header class="piece-header">
+    <p class="piece-type">{{ page.collection | capitalize }}</p>
+    <h1 class="piece-title">{{ page.title }}</h1>
+    {% if page.date %}
+    <p class="piece-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+    {% endif %}
+  </header>
+
+  <div class="piece-divider">· · ·</div>
+
+  <div class="piece-content {% if page.collection == 'poems' %}poem{% endif %}">
+    {{ content }}
+  </div>
+</article>

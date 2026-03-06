@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p class="site-tagline">{{ site.description }}</p>
+      <nav class="site-nav">
+        <a href="{{ '/essays/' | relative_url }}" {% if page.url contains '/essays' %}class="active"{% endif %}>Essays</a>
+        <a href="{{ '/stories/' | relative_url }}" {% if page.url contains '/stories' %}class="active"{% endif %}>Stories</a>
+        <a href="{{ '/poems/' | relative_url }}" {% if page.url contains '/poems' %}class="active"{% endif %}>Poems</a>
+      </nav>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>{{ site.title }}</p>
+    </footer>
+  </div>
+</body>
+</html>

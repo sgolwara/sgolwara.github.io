@@ -1,0 +1,16 @@
+---
+layout: default
+title: Stories
+permalink: /stories/
+---
+
+<h2 class="section-heading">Stories</h2>
+<ul class="piece-list">
+  {% assign sorted = site.stories | sort: 'date' | reverse %}
+  {% for piece in sorted %}
+  <li>
+    <a href="{{ piece.url | relative_url }}">{{ piece.title }}</a>
+    <span class="piece-date">{{ piece.date | date: "%b %-d, %Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>

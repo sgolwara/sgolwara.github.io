@@ -1,0 +1,39 @@
+title: An Archive of Small Thoughts
+description: Essays, stories, and poems.
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed
+
+# Collections
+collections:
+  essays:
+    output: true
+    permalink: /essays/:name/
+  stories:
+    output: true
+    permalink: /stories/:name/
+  poems:
+    output: true
+    permalink: /poems/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: essays
+    values:
+      layout: piece
+  - scope:
+      path: ""
+      type: stories
+    values:
+      layout: piece
+  - scope:
+      path: ""
+      type: poems
+    values:
+      layout: piece
