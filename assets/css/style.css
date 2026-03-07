@@ -220,6 +220,7 @@ body {
 }
 .piece-content.poem .stanza {
   margin-bottom: 1.8em;
+  text-align: center;
 }
 
 /* ── Back link ── */
