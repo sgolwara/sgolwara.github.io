@@ -4,58 +4,59 @@ date: 2025-02-23
 ---
 
 <div class = "stanza">
-Luoyang, the silent town,  
-Where whispers, too, stand afraid.  
-The sun bows to the horizon,  
-Behind the black prison walls.  
+Luoyang, the silent town, <br>
+Where whispers, too, stand afraid. <br>
+The sun bows to the horizon, <br>
+Behind the black prison walls. <br>
 </div>
 
 <div class = "stanza">
-Gates without handles,  
-Where prisoners linger, untried.  
-Even the guards dare not flinch,  
-Inside the black prison walls.  
+Gates without handles, <br>
+Where prisoners linger, untried. <br> 
+Even the guards dare not flinch, <br>
+Inside the black prison walls. <br>
 </div>
 
 <div class = "stanza">
-Silence hums with faded screams,  
-A gesture - treasonous.  
-Iron glows, ember-red,  
-In the torturer’s hall.  
+Silence hums with faded screams, <br>
+A gesture - treasonous. <br>
+Iron glows, ember-red, <br>
+In the torturer’s hall. <br>
 </div>
 
 <div class = "stanza">
-Enter the gates,  
-Gaze upon my art.  
-The Empress' Interrogations, an iron flute  
-In the torturer’s halls.  
+Enter the gates, <br>
+Gaze upon my art. <br>
+The Empress' Interrogations, an iron flute <br>
+In the torturer’s halls. <br>
 </div>
 
 <div class = "stanza">
-A human trachea, twelve inches long,  
-The red flute, eleven and five.  
-Screams rise in perfect song,  
-Echoing deep in my mind.  
+A human trachea, twelve inches long, <br>
+The red flute, eleven and five. <br>
+Screams rise in perfect song, <br>
+Echoing deep in my mind. <br>
 </div>
 
 <div class = "stanza">
-The Empress, cruel.  
-'Tis I, her willing tool,  
-A scalpel in her grand design,  
-Sharpened in my mind.  
+The Empress, cruel. <br>
+'Tis I, her willing tool, <br>
+A scalpel in her grand design, <br>
+Sharpened in my mind. <br>
 </div>
 
 <div class = "stanza">
-My name, forgotten.  
-Yet still, my methods haunt.  
-A child's nightmare, whispered low  
-By wary parents’ tongues.  
-In this world, my shadow fades,  
-A tool so cruel, death shuns me still.  
+My name, forgotten. <br>
+Yet still, my methods haunt. <br>
+A child's nightmare, whispered low <br>
+By wary parents’ tongues. <br>
+In this world, my shadow fades, <br>
+A tool so cruel, death shuns me still. <br>
 </div>
 
 <div class = "stanza">
-No screams follow me here.  
-In the torturer’s grave.  
+No screams follow me here. <br>
+In the torturer’s grave. <br>
 </div>
+
 
