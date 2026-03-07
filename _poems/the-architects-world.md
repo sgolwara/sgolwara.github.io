@@ -56,7 +56,7 @@ Leaving the barren scapes behind,<br>
 The Father walked upward, slow,<br>
 To sit upon His throne of light.<br>
 And as He rested, high above,<br>
-The angels wept,<br>
+The angels wept,
 The devils too.<br>
 Not in sorrow, but in awe.<br>
 </div>
@@ -68,3 +68,4 @@ No more halos.<br>
 No more horns.<br>
 Only the family He always saw.<br>
 </div>
+
