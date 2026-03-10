@@ -1,1 +1,61 @@
+name: Send Newsletter
 
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_essays/**.md'
+      - '_stories/**.md'
+      - '_poems/**.md'
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main site
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # needed to detect which file was added
+
+      - name: Get newly added post
+        id: new_post
+        run: |
+          # Find the file added in this commit
+          NEW_FILE=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- '_essays/*.md' '_stories/*.md' '_poems/*.md' | head -n 1)
+          echo "file=$NEW_FILE" >> $GITHUB_OUTPUT
+
+          if [ -z "$NEW_FILE" ]; then
+            echo "No new post detected, skipping."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "New post: $NEW_FILE"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout subscribers repo
+        if: steps.new_post.outputs.skip == 'false'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/archive-subscribers
+          token: ${{ secrets.SUBSCRIBERS_REPO_TOKEN }}
+          path: subscribers-repo
+
+      - name: Set up Node.js
+        if: steps.new_post.outputs.skip == 'false'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        if: steps.new_post.outputs.skip == 'false'
+        run: npm install gray-matter axios
+
+      - name: Send emails
+        if: steps.new_post.outputs.skip == 'false'
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          SITE_URL: "https://${{ github.repository_owner }}.github.io"
+          NEW_POST_FILE: ${{ steps.new_post.outputs.file }}
+        run: node .github/scripts/send-newsletter.js
