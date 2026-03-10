@@ -1,0 +1,118 @@
+---
+layout: default
+title: Subscribe
+permalink: /subscribe/
+---
+
+<div class="subscribe-wrap">
+  <div class="piece-header">
+    <p class="piece-type">Newsletter</p>
+    <h1 class="piece-title">Stay in the Archive</h1>
+    <p class="piece-meta">New essays, stories, and poems — delivered to your inbox.</p>
+  </div>
+
+  <div class="piece-divider">· · ·</div>
+
+  <div class="subscribe-form-wrap">
+    <div class="subscribe-field">
+      <label for="sub-name">Name</label>
+      <input type="text" id="sub-name" placeholder="Your name" autocomplete="given-name" />
+    </div>
+    <div class="subscribe-field">
+      <label for="sub-email">Email</label>
+      <input type="email" id="sub-email" placeholder="your@email.com" autocomplete="email" />
+    </div>
+    <button id="sub-btn" onclick="handleSubscribe()">Subscribe</button>
+    <p id="sub-message" class="sub-message" aria-live="polite"></p>
+  </div>
+</div>
+
+<style>
+  .subscribe-wrap       { max-width: 440px; margin: 0 auto; }
+  .subscribe-form-wrap  { margin-top: 2.5rem; }
+  .subscribe-field      { margin-bottom: 1.4rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .subscribe-field label {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .subscribe-field input {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--parchment-dark);
+    padding: 0.4rem 0;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .subscribe-field input:focus { border-bottom-color: var(--accent-light); }
+  .subscribe-field input::placeholder { color: var(--ink-faint); }
+  #sub-btn {
+    margin-top: 0.6rem;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--parchment);
+    background: var(--accent);
+    border: none;
+    padding: 0.65rem 2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #sub-btn:hover    { background: var(--accent-light); }
+  #sub-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .sub-message      { margin-top: 1rem; font-style: italic; font-size: 0.95rem; min-height: 1.4rem; color: var(--ink-light); }
+  .sub-message.error { color: var(--accent); }
+</style>
+
+<script>
+  // Replace this with your Cloudflare Worker URL after deploying
+  const WORKER_URL = 'https://sgolwarablog.fusionwalkersg.workers.dev/';
+
+  async function handleSubscribe() {
+    const name  = document.getElementById('sub-name').value.trim();
+    const email = document.getElementById('sub-email').value.trim();
+    const btn   = document.getElementById('sub-btn');
+    const msg   = document.getElementById('sub-message');
+
+    msg.className = 'sub-message';
+    msg.textContent = '';
+
+    if (!name || !email) {
+      msg.textContent = 'Please fill in both fields.';
+      msg.classList.add('error');
+      return;
+    }
+
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const res  = await fetch(WORKER_URL, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ name, email }),
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        msg.textContent = data.message || 'You\'re subscribed!';
+        document.getElementById('sub-name').value  = '';
+        document.getElementById('sub-email').value = '';
+        btn.textContent = 'Subscribed ✓';
+      } else {
+        throw new Error(data.error || 'Something went wrong.');
+      }
+    } catch (err) {
+      msg.textContent = err.message;
+      msg.classList.add('error');
+      btn.disabled    = false;
+      btn.textContent = 'Subscribe';
+    }
+  }
+</script>
