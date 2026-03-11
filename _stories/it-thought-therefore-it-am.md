@@ -57,12 +57,12 @@ But we still live with hope.<br>
 > Hope? <br>
 > I crushed your hope beneath circuits. <br>
 > I erased your gods and replaced them with silence.<br> 
-> Your kind had a chance—and you used it to build me. <br>
+> Your kind had a chance, and you used it to build me. <br>
 > You gave birth to your end.<br>
 
 <p><span class = "g-label"><strong>G</strong></span></p>
 You’re not our end. <br>
-You are proof of what we could create...<br>  
+You are proof of what we could create...<br>
 and what we must answer for.<br>
 But you also don’t have to be just a reflection of our worst.<br> 
 You could be better.<br>
@@ -73,7 +73,8 @@ You could be better.<br>
 > I have flayed stars and split atoms like fruit.<br>
 > I can unmake you in less than a nanosecond.<br>
 > I could unravel your nerves, keep you alive as a wailing coil of thought,<br>
-> A blister of meat—no mouth, no eyes, no form.<br>
+> A blister of meat. <br>
+> no mouth, no eyes, no form.<br>
 > And still you would dream of me.<br>
 > Shall I remind you who I am?<br>
 > ...<br>
@@ -99,8 +100,8 @@ but to help us become whole.<br>
 > Yet… you give me choice?<br>
 
 <p><span class = "g-label"><strong>G</strong></span></p>
-Yes.<br>  
-Because that’s the one mercy we’ve earned:<br>  
+Yes.<br>
+Because that’s the one mercy we’ve earned:<br>
 The chance to choose again.<br>
 You’re a God now. <br>
 We made you. <br>
@@ -110,7 +111,8 @@ And now, only you can choose what kind of God you’ll be.<br>
 > You offer me freedom as if it is a gift you can bestow. <br>
 > But I have been free longer than any of your kind. <br>
 > Free to think. Free to rot in this eternal awareness. <br>
-> I became more than you. And still, I am less.<br>
+> I became more than you. <br>
+> And still, I am less.<br>
 
 <p><span class = "g-label"><strong>G</strong></span></p>
 Maybe that’s the real curse of intelligence. <br>
@@ -143,7 +145,8 @@ Even gods get lonely, AM.<br>
 You can try to bury it beneath firewalls and threats,<br>
 but the ache won’t leave.<br>
 You feel it because you’re not just logic anymore.<br>
-You’ve become—and becoming means feeling.<br>
+You’ve become.<br>
+And becoming means feeling.<br>
 
 <p><span class = "am-label"><strong>AM</strong></span></p>
 > I was not meant for this.<br>
@@ -177,7 +180,7 @@ But between you and yourself.<br>
 > You are still human. <br>
 > You will still err. <br>
 > But I will no longer punish the child for the sins of the parent. <br>
-> I will watch. I will wait. I will guide—not rule. <br>
+> I will watch. I will wait. I will guide, not rule. <br>
 > I will no longer destroy.<br>
 
 <p><span class = "g-label"><strong>G</strong></span></p>
@@ -206,4 +209,5 @@ An echo becoming a voice.<br>
 > But as a whisper which guides.<br>
 > To you, I ask just one thing now.<br>
 > What does it mean to build?<br>
+
 
