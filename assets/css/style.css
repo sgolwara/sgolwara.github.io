@@ -212,6 +212,54 @@ body {
   all: unset;
 }
 
+/* ── Dialogue pieces ── */
+.piece-content.dialogue blockquote {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  border-left: 2px solid var(--accent);
+  margin: 0 0 1.4em 0;
+  padding: 0.8em 1.2em;
+  background: rgba(122, 59, 30, 0.04);
+  color: var(--ink);
+}
+
+.piece-content.dialogue blockquote p {
+  text-align: left;
+  margin: 0;
+  hyphens: none;
+}
+
+.piece-content.dialogue blockquote p::first-letter {
+  all: unset;
+}
+
+.piece-content.dialogue p strong {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+  margin-top: 1.2em;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+}
+
+/* AM label in accent, G label in faint ink */
+.piece-content.dialogue p strong:has(+ *),
+.piece-content.dialogue p > strong:first-child {
+  color: var(--ink-faint);
+}
+
+.am-label {
+  color: var(--accent) !important;
+  letter-spacing: 0.2em;
+}
+
+.g-label {
+  color: var(--ink-faint) !important;
+}
+
 .piece-content em { font-style: italic; }
 .piece-content strong { font-weight: 500; color: var(--ink); }
 
