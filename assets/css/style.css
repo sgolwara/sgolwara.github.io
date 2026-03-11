@@ -207,6 +207,11 @@ body {
   font-weight: 400;
 }
 
+/* Dialogue Only Piece Update */
+.piece-content.no-dropcap p:first-of-type::first-letter {
+  all: unset;
+}
+
 .piece-content em { font-style: italic; }
 .piece-content strong { font-weight: 500; color: var(--ink); }
 
