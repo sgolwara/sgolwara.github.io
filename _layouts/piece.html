@@ -15,7 +15,7 @@ layout: default
 
   <div class="piece-divider">· · ·</div>
 
-  <div class="piece-content {% if page.collection == 'poems' %}poem{% endif %}">
+  <div class="piece-content {% if page.collection == 'poems' %}poem{% endif %} {% if page.no_dropcap %}no-dropcap{% endif %}">
     {{ content }}
   </div>
 </article>
