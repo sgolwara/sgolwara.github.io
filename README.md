@@ -4,16 +4,6 @@ A personal writing site built with Jekyll and hosted on GitHub Pages.
 
 ---
 
-## Deploying to GitHub Pages
-
-1. Create a GitHub account if you don't have one
-2. Create a new repository named exactly: `yourusername.github.io`
-3. Upload all these files to that repository
-4. Go to the repository **Settings → Pages → Source** and set it to **Deploy from a branch**, branch `main`, folder `/ (root)`
-5. Your site will be live at `https://yourusername.github.io` within a minute or two
-
----
-
 ## Adding a new piece
 
 ### Essay
