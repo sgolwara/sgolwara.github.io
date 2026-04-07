@@ -57,7 +57,7 @@ His eyelids drooped, then fell shut. He leaned back, sinking into the wood of th
 
 ---
 
-![The Grinning Marionette](/assets/images/grinning-marionette.jpg)
+![The Grinning Marionette](/assets/images/the-grinning-marionette.jpg)
 
 ---
 
